@@ -15,9 +15,9 @@ def home():
 @app.post("/predict-eta")
 def predict_eta(data: dict):
 
-    distance_km = data["distance_km"]
+    distance_km = data["distanceKm"]
     hour = data["hour"]
-    day_of_week = data["day_of_week"]
+    day_of_week = data["dayOfWeek"]
 
     prediction = model.predict([
         [distance_km, hour, day_of_week]
